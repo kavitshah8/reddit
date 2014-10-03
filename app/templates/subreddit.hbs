@@ -1,0 +1,13 @@
+<ul>
+	{{#each}}
+	<div>
+		<img {{bind-attr src=thumbnail}} style="width:25px;height:25px">
+		<a {{bind-attr href=url}}>{{title}}</a>  ({{domain}})
+		<br>
+			<small>by {{author}}</small>
+		<hr>
+	</div>
+	{{/each}}
+</ul>
+
+{{outlet}}

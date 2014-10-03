@@ -1,0 +1,12 @@
+html, body {
+}
+
+.active{
+	font-weight: bold;
+	font-style: italic;
+	font-size: 12pt;
+}
+
+nav ul li{
+	text-transform: uppercase;
+}
