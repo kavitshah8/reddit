@@ -5,6 +5,8 @@ export default Ember.Route.extend({
 	
 	model:function(params){
 		var adapter = SubredditAdapter.create();
-		return adapter.find('subreddit',params.subreddit_id);
+		var url = "http://www.reddit.com/r/"+params.subreddit_id+".json";
+		return adapter.getJSONWithoutToken(url);
+		// return adapter.find('subreddit',params.subreddit_id);
 	}
 });
