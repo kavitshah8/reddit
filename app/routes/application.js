@@ -3,6 +3,6 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 	
 	model:function () {
-		return ['aww','corgi','pugs','books','space','food','philosophy','jokes'];	
+		return ['webdev','programming','javascript','devops','web_work','space','food','philosophy','jokes'];	
 	}
 });

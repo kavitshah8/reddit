@@ -8,6 +8,13 @@
     		<li>{{#link-to 'subreddit' this}} {{this}} {{/link-to}}</li>
     	{{/each}}
     </ul>
+  <ul class="nav navbar-right">
+    {{#if session.isAuthenticated}}
+      <a href="#">Logout</a>
+    {{else}}
+      {{#link-to 'login'}}Login{{/link-to}}
+    {{/if}}
+  </ul>
   </div>
 </nav>
 

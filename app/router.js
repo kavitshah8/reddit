@@ -6,8 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-
 	this.resource('subreddit', { path: '/r/:subreddit_id' });
+  this.route('login');
 });
 
 export default Router;
