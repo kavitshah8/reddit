@@ -1,0 +1,20 @@
+<div class="centered">
+	{{title}}
+	
+	<div>
+			<span class="num">{{condition.temp}}</span>
+			<span class="deg">°</span>
+			<span>
+				<img class="centered-img" src="http://l.yimg.com/a/i/us/we/52/27.gif">
+				<span>{{condition.text}}</span>
+			</span>
+	</div>
+
+	{{#each forecast}}
+		<ul>
+			<li>{{day}}</li>
+			<li>{{high}}</li>
+			<li>{{low}}</li>
+		</ul>
+	{{/each}}
+</div>
