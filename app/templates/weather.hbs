@@ -1,29 +1,28 @@
-<div class="centered">
-	{{title}}
-	
-	<div>
+<div class="outer">
+
+	<div class="inner">
+
+		{{title}}
+		<div>
 			<span class="num">{{temp}}</span>
 			<span class="deg">°</span>
 			<span>
-				<img class="centered-img" src="http://l.yimg.com/a/i/us/we/52/27.gif">
-				<span>{{text}}</span>
-			</span>
-	</div>
-
-	<div class="row">
-		<div class="col-md-8">
-			{{#each forecast}}
-					{{day}} 
-			{{/each}}
+					<img class="centered-img" src="http://l.yimg.com/a/i/us/we/52/27.gif">
+					<span>{{text}}</span>
+				</span>
 		</div>
+		<span>
+			<div class="row">
+					{{#each forecast}}
+						<span class="col-md-2"> {{day}} </span>
+					{{/each}}
+			</div>
+			<div class="row">
+					{{#each forecast}}
+						<span class="col-md-2"> {{high}}° / {{low}}° </span>
+					{{/each}}
+			</div>
+		</span>
 	</div>
-	
-	<div class="row">
-		<div class="col-md-8">
-			{{#each forecast}}
-					{{high}}° / {{low}}° 
-			{{/each}}
-		</div>
-	</div>
-
 </div>
+
