@@ -1,95 +1,50 @@
 .active{
-
 	font-weight: bold;
-
 	font-style: italic;
-
 	font-size: 12pt;
-
 }
-
-
 
 nav ul li{
-
 	text-transform: uppercase;
-
 }
-
-
 
 .outer{
-
 	width: 800px;
-
-	height: 400px;
-
+	height: 300px;
 	margin: auto auto;
-
 	background-color:#D5D1D1;
-
 }
-
-
 
 .inner{
-
 	width: 600px;
-
 	height: 200px;
-
 	background-color:white;
-
 	margin: auto auto;
-
 }
-
-
 
 .col-md-2{
-
 	border-right: 1px dashed black;
-
 }
 
-
-
 .num{
-
 	font-size: 500%;
-
 	font-family: HelveticaNeue-UltraLight,"Helvetica Neue",HelveticaNeue-Light,HelveticaNeue,helvetica,arial,sans-serif;
-
 	font-weight: bold; 
-
 }
 
 .deg{
-
 	font-size: 500%;
-
 }
 
 .centered-img{
-
 	width:100px;
-
 	margin:auto;
-
 	padding:5px;
-
 }
 
-
-
 .left{
-
 	width:100px;
-
 	margin:10px auto;
-
 	padding:15px;
-
 	background-color:#eee;
-
 }
