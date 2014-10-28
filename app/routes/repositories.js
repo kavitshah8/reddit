@@ -7,9 +7,9 @@ export default Ember.Route.extend({
 
 		var adapter = Adapter.create();
 
-		var url = "https://api.github.com/users/kavitshah8/repos?type="+ params.query;
+		var url = "https://api.github.com/users/kavitshah8/repos?type="+ params.type;
 
-    if (params.query != 'user') {
+    if (params.type != 'user') {
       return []; // no results;
     }
     else

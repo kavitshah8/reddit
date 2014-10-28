@@ -2,14 +2,14 @@ import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
 
-  queryParams: ['query'],
-  query: null,
+  queryParams: ['type'],
+  type: null,
   
-  queryField: Ember.computed.oneWay('query'),
+  queryField: Ember.computed.oneWay('type'),
 
   actions: {
     search: function() {
-      this.set('query', this.get('queryField'));
+      this.set('type', this.get('queryField'));
     }
   }			
 });
