@@ -1,0 +1,13 @@
+<form {{action "search" on="submit"}}>
+  {{input value=queryField}}
+  <button>Search</button>
+</form>
+    
+{{#if query}}
+  <p>Displaying results for "{{query}}"</p>
+  <ul>
+    {{#each}}
+      <li>{{name}}</li>
+    {{/each}}     
+  </ul>
+{{/if}}
