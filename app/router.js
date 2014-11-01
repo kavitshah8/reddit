@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('login');
   this.route('weather');
   this.route('repositories');
+  this.route('advise');
 });
 
 export default Router;

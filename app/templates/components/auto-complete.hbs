@@ -1,0 +1,13 @@
+{{input type="text" value=searchText placeholder="Search"}}
+
+<ul>
+	{{#each results}}
+		<li>
+			<a href="#" actions='resultSelected' this>
+				{{this}}
+			</a>
+		</li>	
+	{{/each}}
+</ul>
+
+{{yield}}

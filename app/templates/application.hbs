@@ -4,9 +4,9 @@
       <a class="navbar-brand" href>Ember Reddit</a>
     </div>
     <ul class="nav navbar-nav">
-    	{{#each}}
-    		<li>{{#link-to 'subreddit' this}} {{this}} {{/link-to}}</li>
-    	{{/each}}
+      {{#each}}
+        <li>{{#link-to 'subreddit' this}} {{this}} {{/link-to}}</li>
+      {{/each}}
     </ul>
   <ul class="nav navbar-right">
     {{#if session.isAuthenticated}}
@@ -18,16 +18,18 @@
   </div>
 </nav>
 
-<div class='left'>
-  {{#link-to 'weather'}}Weather{{/link-to}}
-</div>
+<div>
+  <span>
+    {{#link-to 'advise'}}Advise{{/link-to}}
+  </span>
 
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      {{#link-to 'repositories'}}Git Repositories{{/link-to}}
-    </div>
-  </div>
-</nav>
+  <span>
+    {{#link-to 'weather'}}Weather{{/link-to}}
+  </span>
+
+  <span>
+    {{#link-to 'repositories'}}Query Params{{/link-to}}
+  </span>
+</div>
 
 {{outlet}}
