@@ -2,9 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-	searchText: null,
+	// reset:function(){
+	// 	this.set('searchText',null);
+	// 	this.set('dictionary',[]);
+	// }.on('init'),
 
-	dictionary: [],
+	searchText: null,
+	dictionary:[],
 
 	results: function () {
 				
