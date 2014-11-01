@@ -28,6 +28,12 @@ export default Ember.Component.extend({
 		return this.get('dictionary').filter(function(word){
 			return word.match(regex);
 		}); 
-	}.property('searchText')
+	}.property('searchText'),
+
+	actions:{
+		resultSelected: function(word){
+			alert(word);
+		},
+	},
 
 });
