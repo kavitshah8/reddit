@@ -3,3 +3,8 @@ var Portfolio = function(){
 	this.code = NULL;
 	this.marketValue = NULL;
 };
+
+module.exports = function(){
+	var instance = new Portfolio();
+	return instance;
+};
