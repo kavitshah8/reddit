@@ -6,6 +6,7 @@ export default Ember.ObjectController.extend( {
 	name: '',
 	code: null,
 	marketValue: null,
+	success: false,
 
 	actions:{
 		save: function(){
@@ -17,12 +18,12 @@ export default Ember.ObjectController.extend( {
 				marketValue: this.get("marketValue"),
 			};
 
-			adapter.postWithoutToken('/api/portfolio/new', {params:params}).then(function(){
-				
+			adapter.postWithoutToken('/api/portfolio/new', params).then(function(){
+				this.set("success",true);
 			}).catch(function(){
 				alert("catch block");
 			}).finally(function(){
-				alert("finally block");
+				this.set("success",true);
 			});
 			// console.log(params);
 		},
