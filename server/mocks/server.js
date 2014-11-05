@@ -5,4 +5,9 @@ module.exports = function(app) {
     res.send({"server":[]});
   });
   app.use('/api/server', serverRouter);
+  
+  app.post('/api/portfolio/new', function(req, res){
+  	console.log(req.body);
+  	res.json(req.body);
+  });
 };

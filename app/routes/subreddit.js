@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import Adapter from 'reddit/adapters/subreddit';
+import Adapter from 'reddit/adapters/rest';
 
 export default Ember.Route.extend({
 	
