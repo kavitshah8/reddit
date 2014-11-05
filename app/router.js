@@ -11,6 +11,9 @@ Router.map(function() {
   this.route('weather');
   this.route('repositories');
   this.route('advise');
+  this.resource('portfolio', function() {
+  	this.route('new');
+  });
 });
 
 export default Router;
