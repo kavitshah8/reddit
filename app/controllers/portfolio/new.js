@@ -3,7 +3,7 @@ import Adapter from 'reddit/adapters/rest';
 
 export default Ember.ObjectController.extend( {
 
-	name: '',
+	name: null,
 	code: null,
 	marketValue: null,
 	success: false,
@@ -20,14 +20,11 @@ export default Ember.ObjectController.extend( {
 
 			adapter.postWithoutToken('/api/portfolio/new', params);
 
-			this.transitionTo('portfolio');
-			// adapter.postWithoutToken('/api/portfolio/new', params).then(function(){
-			// 	this.set("success",true);
-			// }).catch(function(){
-			// 	alert("catch block");
-			// }).finally(function(){
-			// 	this.set("success",true);
-			// });
+			this.set('name',null);
+			this.set('code',null);
+			this.set('marketValue',null);
+			
+			this.transitionToRoute('portfolio');
 		},
 	},
 } );

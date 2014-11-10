@@ -10,9 +10,5 @@ export default Ember.Route.extend({
 			return result;    
     });
   },
- 
- 	setupController: function(controller, model) {
-    controller.set('model', model);
-  },
-  
+   
 });

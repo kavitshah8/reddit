@@ -16,4 +16,9 @@ module.exports = function(app) {
     console.log(portfolioArray);
   	res.json(req.body);
   });
+
+  app.get('/api/portfolio', function(req, res){
+    console.log(portfolioArray);
+    res.json(portfolioArray);
+  });
 };
