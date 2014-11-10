@@ -18,14 +18,16 @@ export default Ember.ObjectController.extend( {
 				marketValue: this.get("marketValue"),
 			};
 
-			adapter.postWithoutToken('/api/portfolio/new', params).then(function(){
-				this.set("success",true);
-			}).catch(function(){
-				alert("catch block");
-			}).finally(function(){
-				this.set("success",true);
-			});
-			// console.log(params);
+			adapter.postWithoutToken('/api/portfolio/new', params);
+
+			this.transitionTo('portfolio');
+			// adapter.postWithoutToken('/api/portfolio/new', params).then(function(){
+			// 	this.set("success",true);
+			// }).catch(function(){
+			// 	alert("catch block");
+			// }).finally(function(){
+			// 	this.set("success",true);
+			// });
 		},
 	},
 } );

@@ -12,12 +12,11 @@ export default Ember.Route.extend({
     if (params.type !== 'user') {
       return []; // no results;
     }
-    else
-    {	
+    else{	
 			return adapter.getJSONWithoutToken(url).then(function(result){
 				return result;    
     });
-    }
+  }
     
   },
   
