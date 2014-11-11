@@ -1,9 +1,9 @@
 var Portfolio = require('portfolio');
 
 var SharePortfolio = function () {
-	this.name = NULL;
-	this.code = NULL;
-	this.baseFee = NULL;
+	this.name = null;
+	this.code = null;
+	this.baseFee = null;
 };
 
 SharePortfolio.prototype = new Portfolio();
