@@ -2,11 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-	// reset:function(){
-	// 	this.set('searchText',null);
-	// 	this.set('dictionary',[]);
-	// }.on('init'),
-
 	searchText: null,
 	dictionary:[],
 
@@ -18,12 +13,6 @@ export default Ember.Component.extend({
 		}
 
 		var regex = new RegExp(searchText,'i');
-
-		// var res = this.get('dictionary').filter(function(word){
-		// 	return word.match(regex);
-		// });
-
-		// return res;
 
 		return this.get('dictionary').filter(function(word){
 			return word.match(regex);
