@@ -22,7 +22,7 @@ You will need the following things properly installed on your computer.
 
 * `ember server`
 * Visit your app at http://localhost:4200.
-* Visit my app at http://104.236.30.92/.
+* Visit my app at http://finallecture.com.
 
 ### Code Generators
 
