@@ -22,8 +22,8 @@ module.exports = function(app) {
     res.json(portfolioArray);
   });
 
-  app.post('payload', function(req, res){
+  app.post('/payload', function(req, res){
     console.log(req.body);
   });
-  
+
 };
