@@ -24,6 +24,7 @@ module.exports = function(app) {
 
   app.post('/payload', function(req, res){
     console.log(req.body);
+    res.json(req.body);
   });
 
 };
