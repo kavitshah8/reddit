@@ -22,9 +22,32 @@ module.exports = function(app) {
     res.json(portfolioArray);
   });
 
+  // for githooks
   app.post('/payload', function(req, res){
     console.log(req.body);
     res.json(req.body);
+  });
+
+  // client-side authentication
+  var currentToken;
+  app.post('/auth.json', function(req, res){
+
+    var body = req.body,
+        username = body.username,
+        password = body.password;
+
+    if(username === 'ember' && password === 'cast'){
+      currentToken = 'ABC';
+      res.send({
+        success: true,
+        token: currentToken
+      });
+    }else{
+      res.send({
+        success: false,
+        message: 'Invalid username/password'
+      });
+    }
   });
 
 };
