@@ -9,6 +9,6 @@ export default Ember.Route.extend({
 		return adapter.getJSONWithoutToken(url).then(function(result){
 			return result;    
     });
-  },
+  }
    
 });
