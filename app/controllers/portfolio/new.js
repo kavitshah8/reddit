@@ -9,14 +9,12 @@ export default Ember.ObjectController.extend( {
 	success: false,
 
 	actions:{
+		
 		save: function(){
 			
 			var adapter = Adapter.create();
-			var params = {
-				name: this.get("name"),
-				code: this.get("code"),
-				marketValue: this.get("marketValue"),
-			};
+
+			var params = this.getProperties( 'name', 'code', 'marketValue');
 
 			adapter.postWithoutToken('/api/portfolio/new', params);
 
