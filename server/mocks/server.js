@@ -30,7 +30,7 @@ module.exports = function(app) {
 
   // client-side authentication
   var currentToken;
-  app.post('/api/auth.json', function(req, res){
+  app.post('/api/auth', function(req, res){
 
     var body = req.body,
         username = body.username,
