@@ -24,7 +24,6 @@ export default Ember.Controller.extend({
 			if (response.success){	
 				self.set('token', response.token);
 			}
-			return alert("response");
 		});		
 
 	}
