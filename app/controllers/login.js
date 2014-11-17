@@ -19,9 +19,9 @@ export default Ember.Controller.extend({
 
 		self.set('errorMessage', null);
 
-		return adapter.postWithoutToken('/api/auth', data).then(function(response){
+		return adapter.postWithoutToken('/api/auth', data).then(function(response) {
 			self.set('errorMessage', response.message);
-			if (response.success){	
+			if (response.success) {	
 				self.set('token', response.token);
 			}
 		});		
