@@ -11,15 +11,19 @@ module.exports = function(app) {
   var portfolioArray = [];
 
   app.post('/api/portfolio/new', function(req, res){
-  	console.log(req.body);
-    portfolioArray.push(Portfolio(req.body));
-    console.log(portfolioArray);
-  	res.json(req.body);
+    if (validTokenProvided(req, res)) {
+      console.log(req.body);
+      portfolioArray.push(Portfolio(req.body));
+      console.log(portfolioArray);
+    	res.json(req.body);
+    }
   });
 
   app.get('/api/portfolio', function(req, res){
-    console.log(portfolioArray);
-    res.json(portfolioArray);
+    if(validTokenProvided(req, res)){ 
+      console.log(portfolioArray);
+      res.json(portfolioArray);
+    }
   });
 
   // for githooks
@@ -30,7 +34,7 @@ module.exports = function(app) {
 
   // client-side authentication
   var currentToken;
-  app.post('/api/auth.json', function(req, res){
+  app.post('/api/auth', function(req, res){
 
     var body = req.body,
         username = body.username,
@@ -49,5 +53,22 @@ module.exports = function(app) {
       });
     }
   });
+
+  function validTokenProvided(req, res) {
+
+    // Check POST, GET, and headers for supplied token.
+    var userToken = req.body.token || req.param('token') || req.headers.token;
+
+    if (!currentToken || userToken != currentToken) {
+      // depreciated pattern
+      // res.send(401, { error: 'Invalid token. You provided: ' + userToken }); 
+      // new pattern according to emebr-cli
+      // res.status(status).send(body) (http://expressjs.com/4x/api.html#response)
+      res.status(401).send({ error: 'Invalid token. You provided: ' + userToken + ' token.'});
+      return false;
+    }
+
+    return true;
+  }
 
 };
