@@ -8,7 +8,7 @@ export default Ember.Route.extend({
 		var query = '%20item%20from%20weather.forecast%20where%20location%3D%2222102%22&';
 		var url = 'http://query.yahooapis.com/v1/public/yql?q=select' + query + 'format=json';
 
-		return adapter.getJSONWithoutToken(url).then(function(result){
+		return adapter.getWithoutToken(url).then(function(result){
 			var title = result.query.results.channel.item.title.split(' ');
 			title = title[2] + title[3];
 

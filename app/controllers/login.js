@@ -11,6 +11,12 @@ export default Ember.Controller.extend({
 		});
 	},
 
+	token: localStorage.token,
+	
+	tokenChanged: function() {
+	  localStorage.token = this.get('token');
+	}.observes('token'),
+
 	login: function(){
 
 		var self = this;
@@ -25,6 +31,6 @@ export default Ember.Controller.extend({
 				self.set('token', response.token);
 			}
 		});		
-
 	}
+
 });

@@ -43,12 +43,12 @@ module.exports = function(app) {
 
   app.get('/api/portfolio', function(req, res){
     console.log(req);
-
-    if(validTokenProvided(req, res)){ 
-      console.log(portfolioArray);
-      // res.json(portfolioArray);
-      res.status(200).send(portfolioArray);
-    }
+    res.send(true);
+    // if(validTokenProvided(req, res)){ 
+    //   console.log(portfolioArray);
+    //   // res.json(portfolioArray);
+    //   res.status(200).send(portfolioArray);
+    // }
   });
 
   app.post('/api/portfolio/new', function(req, res){

@@ -10,6 +10,5 @@ export default AuthenticatedRoute.extend({
 			return result;    
     });
   },
-  
 
 });

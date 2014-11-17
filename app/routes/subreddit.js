@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 		var adapter = Adapter.create();
 		var url = "http://www.reddit.com/r/"+params.subreddit_id+".json";
 
-		return adapter.getJSONWithoutToken(url).then(function(result){
+		return adapter.getWithoutToken(url).then(function(result){
 			return result.data.children.map(function(c){
 				return {
 					id: c.id,
