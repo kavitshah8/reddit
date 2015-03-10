@@ -20,9 +20,9 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember server`
-* Visit your app at http://localhost:4200.
-* Visit my app at http://finallecture.com.
+* `ember s --host 127.0.0.1 --port 4200`. And visit http://localhost:4200.
+
+* Visit my app at http://finallecture.com
 
 ### Code Generators
 
